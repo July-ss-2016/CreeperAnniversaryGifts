@@ -1,0 +1,7 @@
+mysql:
+  host: localhost
+  port: 3306
+  database: mc_server_creeper
+  username: root
+  password: 123456
+  table_name: creeper_anniversary_gifts_playerdata

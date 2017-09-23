@@ -1,0 +1,8 @@
+name: CreeperAnniversaryGifts
+main: vip.creeper.mcserverplugins.creeperanniversarygifts.CreeperAnniversaryGifts
+author: July_ss
+version: 1.0.0
+depend: [PlayerPoints,EasyKits]
+commands:
+  cag:
+  ocag:

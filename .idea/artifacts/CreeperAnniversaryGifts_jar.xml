@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CreeperAnniversaryGifts:jar">
+    <output-path>$PROJECT_DIR$/../../../test_servers/Spigot_1.8.8_0/plugins</output-path>
+    <root id="archive" name="CreeperAnniversaryGifts.jar">
+      <element id="module-output" name="CreeperAnniversaryGifts" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
