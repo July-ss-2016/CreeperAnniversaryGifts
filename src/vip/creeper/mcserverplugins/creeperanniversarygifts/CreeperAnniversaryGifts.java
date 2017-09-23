@@ -103,6 +103,13 @@ public class CreeperAnniversaryGifts extends JavaPlugin {
     }
 
     public boolean initSql() {
+        this.sqlManager = new SqlManager(SqlUtil.getSqlConnection(settings.getHost(), settings.getPort(), settings.getDatabase(), settings.getUsername(), settings.getPassword()));
+
+        if (sqlManager.getCon() == null) {
+            MsgUtil.warring("MySQL连接失败.");
+            return false;
+        }
+
         try {
             if (!sqlManager.isExistsTable(settings.getTableName())) {
                 if (!sqlManager.executeStatement("create table " + settings.getTableName() + "(received_player_name varchar(32))")) {
@@ -112,13 +119,6 @@ public class CreeperAnniversaryGifts extends JavaPlugin {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
-        }
-
-        this.sqlManager = new SqlManager(SqlUtil.getSqlConnection(settings.getHost(), settings.getPort(), settings.getDatabase(), settings.getUsername(), settings.getPassword()));
-
-        if (sqlManager.getCon() == null) {
-            MsgUtil.warring("MySQL连接失败.");
             return false;
         }
 

@@ -68,7 +68,7 @@ public class GiftsManager {
             e.printStackTrace();
         }
 
-        int r = Util.getRandomValue(1, 25);
+        int r = Util.getRandomValue(1, 30);
 
         plugin.getPlayerPoints().getAPI().give(player.getUniqueId(), r);
         MsgUtil.sendMsg(player,"&d你抽到了 &e" + r +"个 &d点券!");
